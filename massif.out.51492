@@ -1,0 +1,45 @@
+desc: (none)
+cmd: ./deadcode_O3
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=74287477
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=74292158
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=peak
+n1: 1024 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1024 0x48E3BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x48F2CDF: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48F1F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 1024 0x48F06D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 1024 0x48F06D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 1024 0x48DA14C: outstring_func (vfprintf-internal.c:239)
+       n1: 1024 0x48DA14C: __vfprintf_internal (vfprintf-internal.c:1263)
+        n1: 1024 0x4999C4A: __printf_chk (printf_chk.c:33)
+         n0: 1024 0x1091C5: main (in /home/students/awallace/csc2410/codeoptimizationlab/deadcode_O3)
+#-----------
+snapshot=3
+#-----------
+time=74292158
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
